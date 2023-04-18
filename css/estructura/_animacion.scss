@@ -1,0 +1,85 @@
+.footer
+{
+    a 
+    {
+        color: inherit;
+    }
+    .footer-animacion 
+    {
+        max-width: 60rem;
+        max-height: auto;
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+    }
+    .footer-animacion:hover {
+        pointer-events: auto;
+    }
+    .mensaje 
+    {
+        text-transform: uppercase;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    .linea 
+    {
+        width: 15rem;
+        height: 4px;
+        background-color: #fff;
+        margin-left: 2rem;
+        margin-right: auto;
+        transform: scaleX(0.2);
+        transform-origin: left;
+        transition: transform 0.5s;
+    }
+    .footer-animacion:hover .linea 
+    {
+      transform: scaleX(1);
+    }
+    .lista-item 
+    {
+      display: flex;
+      list-style: none;
+    }
+    .lista-item 
+    {
+      margin-inline: 2rem;
+      opacity: 0;
+      transition: transform 0.5s, opacity 0.5s;
+    }
+    .lista-item:nth-child(odd) 
+    {
+        transform: translateY(2rem);
+    }
+    .lista-item:nth-child(even) {
+      transform: translateY(-2rem);
+    }
+    .footer-animacion:hover .lista-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .lista-link 
+    {
+      font-size: 30px;
+    }
+    .lista-link i 
+    {
+      transition: color 0.5s;
+    }
+    .lista-link:hover  i.fa-facebook-f 
+    {
+      color: #3b5998;
+    }
+    .lista-link:hover  .fa-twitter 
+    {
+      color: #1da1f2;
+    }
+    .lista-link:hover  .fa-whatsapp 
+    {
+      color: #85e27b;
+    }
+    .lista-link:hover  .fa-instagram 
+    {
+      color: #a948b1;
+    }
+}

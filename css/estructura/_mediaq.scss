@@ -1,0 +1,113 @@
+//*web responsive
+@media only screen and (max-width: 549px)
+{   
+    .contenedor-fluid 
+    {
+        background-position: -475px 0; 
+        .general
+        {
+            h1 
+            {
+                font-size: $tamano-h1-r;
+            }
+            h2 
+            {
+                font-size: $tamano-h2-r;
+                text-align: center;
+            }
+            
+        }
+        .main
+        {
+            .carousel
+            {
+                width: 300px;
+                height: 300px;
+                img 
+                {
+                    width: 300px;
+                    height: 300px;     
+                }
+            }   
+        }
+        .section
+        {   
+            grid-template-areas: "aside"
+                                "article";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+        .aside
+        {   
+            grid-area: aside;
+            p 
+            {
+                font-size: $tamano-p-r;
+            }
+        }
+        .article
+        {   
+            grid-area: article;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content:center;
+            iframe 
+            {
+                margin-top: 30px;
+            }
+            
+        }
+        .footer
+        {
+            h2 
+            {
+                font-size: $tamano-h2-r;
+            }
+            .footer-animacion
+            {
+                max-width: auto;
+                pointer-events: none;
+                .mensaje , .linea 
+                {
+                    display: none;
+                }
+                .lista-item 
+                {
+                  display: flex;
+                  list-style: none;
+                  opacity:calc(1);
+                }
+                .lista-item
+                {
+                    transform: translateY(0rem);
+                }
+            }           
+        }
+        //book
+        .galeria-container
+        {
+            display: flex;
+            flex-flow: row wrap;
+        } 
+        //estudio
+        .main-estudio
+        {
+            grid-template-columns: auto ;
+            grid-template-rows: auto auto auto auto auto auto ;
+            grid-template-areas: "main-item-1"
+                              "main-item-2"
+                              "main-item-4"
+                              "main-item-3"
+                              "main-item-5"
+                              "main-item-6"; 
+        }
+        //contacato
+        .main-contacto
+        {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            row-gap: 150px;            ;
+        }
+    }
+}    

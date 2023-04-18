@@ -1,0 +1,40 @@
+//variables
+$color-fondo: #0d0d0d;
+$color-letra: #f2f2f2;
+
+.contenedor-fluid
+{
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    background-color: $color-fondo;
+    background-image: url(../img/img-fondo4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $color-letra;
+}
+.header 
+{   
+    .container-fluid
+    {
+        background-color: $color-fondo;
+        .nav-link  
+        {
+            color: $color-letra; 
+        }
+    }    
+}
+.carousel 
+{
+    filter:grayscale(0.8);
+        &:hover
+        {
+            filter:grayscale(0);
+        }
+    img 
+    {
+        object-fit:cover
+    }    
+} 
