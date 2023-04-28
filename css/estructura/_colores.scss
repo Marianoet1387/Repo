@@ -1,25 +1,36 @@
 //variables
 $color-fondo: #0d0d0d;
+$color-fondo1: rgb(33, 33, 33);
 $color-letra: #f2f2f2;
-
+$color-fondo2: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
+$color-linea: linear-gradient(rgb(34, 34, 34), rgb(52, 52, 52), rgb(100, 100, 100),rgb(150, 150, 150));
+body
+{
+    color: $color-letra;
+    background-color: $color-fondo;
+    a 
+    {
+        text-decoration: none;
+        color: $color-letra;
+    }
+}
 .contenedor-fluid
 {
-    *{
+    *
+    {
         padding: 0%;
         margin: 0%;
     }
-    background-color: $color-fondo;
     background-image: url(../img/img-fondo4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: $color-letra;
 }
 .header 
 {   
     .container-fluid
     {
-        background-color: $color-fondo;
+        background-color: $color-fondo1;
         .nav-link  
         {
             color: $color-letra; 
@@ -34,7 +45,33 @@ $color-letra: #f2f2f2;
             filter:grayscale(0);
         }
     img 
-    {
+    {  
         object-fit:cover
     }    
+}
+//book
+.galeria-container
+{   
+    border: solid 1px;
+    border-color: $color-linea;
+   h3 
+   {
+    background: $color-fondo2;
+   }
 } 
+//contacto
+.main-contacto
+{
+    .contacto-form
+    {
+        border: solid 1px;
+        border-color: $color-linea;
+        margin: 20px;
+    }
+    .contacto-maps
+    {
+        border: solid 1px;
+        border-color: $color-linea;
+        margin: 20px;
+    }
+}

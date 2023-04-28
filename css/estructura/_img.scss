@@ -1,10 +1,11 @@
-//variables
-$img-logo: 80px ;
+//variables tamaños de imagenes y videos
+$img-logo: 60px ;
 $img-article: 300px;
 $img-carousel: 600px;
 $img-gral: 150px;
-$border-logo: 50px;
+$border-logo: 80px;
 $border-carousel:30px;
+$img-estudio: 500px;
 
 .header 
 {  
@@ -47,12 +48,19 @@ $border-carousel:30px;
         height: $img-logo;
     }
 }
-//galeria
+//book
 .galeria-container
 {
+    margin: 40px;
+    padding: 40px;
     img 
     {
-        border-radius: $border-carousel
+        border-radius: $border-carousel;  
+        filter: blur(1.5px);    
+            &:hover
+            {
+                filter: blur(0px);
+            }       
     }
 }
 //estudio
@@ -60,14 +68,15 @@ $border-carousel:30px;
 {
     img , iframe 
     {
+        filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
         border: $border-carousel;
-        height: $img-article;
-        width: $img-article ;
+        height: $img-estudio;
+        width: $img-estudio ;
         border-radius: $border-carousel;
         object-fit: cover;
     }
 }
-
+//contacto
 .main-contacto
 {
     .contacto-maps 
@@ -77,7 +86,5 @@ $border-carousel:30px;
                 height: $img-article;
                 border-radius: $border-carousel ;
             }  
-        
-        
     }
 }
